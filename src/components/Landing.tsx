@@ -3,7 +3,7 @@ import React from 'react'
 import { BackgroundBeamsWithCollision } from "@/components/ui/BackgroundBeamsWithCollison";
 import { IconCodeAsterisk, IconFileCode2 } from "@tabler/icons-react";
 import { Geist, Inria_Serif } from "next/font/google";
-import { FeatureCard } from "@/components/ui/FeatureCard";
+import { FeatureCard } from './ui/FeatureCard';
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
