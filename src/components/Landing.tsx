@@ -2,7 +2,7 @@
 import React from 'react';
 import { BackgroundBeamsWithCollision } from "@/components/ui/BackgroundBeamsWithCollison";
 import { IconCode, IconFileCode2 } from "@tabler/icons-react";
-import { Geist, Inria_Serif } from "next/font/google";
+import { Geist, Inria_Serif, Sansita } from "next/font/google";
 import { FeatureCard } from './ui/FeatureCard';
 
 const geistSans = Geist({
@@ -14,6 +14,10 @@ const inriaSerif = Inria_Serif({
     subsets: ["latin"],
     weight: ["400", "700"]
 });
+const sansita = Sansita({
+    subsets: ["latin"],
+    weight: ["400", "700"]
+})
 
 const Landing = () => {
     return (
@@ -22,7 +26,7 @@ const Landing = () => {
                 <div className="relative  text-white">
                     <div className="relative z-10 md:mt-20 container mx-auto px-4 py-16 h-full flex flex-col md:flex-row items-center justify-between">
                         <div className="max-w-4xl  md:mt-0 text-center md:text-left">
-                            <h1 className={`text-4xl md:text-6xl ${geistSans.className} font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-700 text-transparent bg-clip-text`}>
+                            <h1 className={`text-4xl md:text-6xl ${sansita.className} text-gray-200 font-bold mb-6 text-transparent bg-clip-text`}>
                                 Hack On Hills - 2K25
                             </h1>
                             <p className={`${inriaSerif.className} text-lg md:text-xl text-gray-300 mb-8`}>

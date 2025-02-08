@@ -1,5 +1,5 @@
 "use client"
-import { Geist } from 'next/font/google';
+import { Geist, Sansita } from 'next/font/google';
 import Image from 'next/image'
 import React from 'react'
 
@@ -8,12 +8,17 @@ const geistSans = Geist({
     variable: "--font-geist-sans",
     subsets: ["latin"],
 });
+
+const sansita = Sansita({
+    subsets: ["latin"],
+    weight: ["400", "700"]
+})
 const About = () => {
     return (
-        <section className="bg-gradient-to-br from-black via-slate-500/80 to-blue-950/50 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <section className="bg-gradient-to-br from-black via-slate-600 to-blue-950/50 text-white py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
                 <header className="text-center mb-16">
-                    <h2 className={`text-4xl font-bold sm:text-5xl ${geistSans.className}`}>Hack On Hills</h2>
+                    <h2 className={`text-4xl font-bold sm:text-5xl ${sansita.className}`}>Hack On Hills</h2>
                     <div className="mt-2 h-1 w-24 bg-purple-400 mx-auto"></div>
                 </header>
 
