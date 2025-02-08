@@ -1,7 +1,7 @@
-"use client"
-import React from 'react'
+"use client";
+import React from 'react';
 import { BackgroundBeamsWithCollision } from "@/components/ui/BackgroundBeamsWithCollison";
-import { IconCodeAsterisk, IconFileCode2 } from "@tabler/icons-react";
+import { IconCode, IconFileCode2 } from "@tabler/icons-react";
 import { Geist, Inria_Serif } from "next/font/google";
 import { FeatureCard } from './ui/FeatureCard';
 
@@ -13,23 +13,23 @@ const geistSans = Geist({
 const inriaSerif = Inria_Serif({
     subsets: ["latin"],
     weight: ["400", "700"]
-
 });
+
 const Landing = () => {
     return (
-        <BackgroundBeamsWithCollision>
-            <div className="flex flex-col">
-                <div className="relative min-h-screen h-screen w-screen text-white">
-                    <div className="relative z-10 mt-10 container mx-auto px-4 py-16 h-full flex items-center justify-between">
-                        <div className="max-w-4xl mt-30">
-                            <h1 className={`text-6xl ${geistSans.className} font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text`}>
+        <BackgroundBeamsWithCollision className=''>
+            <div className="flex h-screen w-screen flex-col">
+                <div className="relative  text-white">
+                    <div className="relative z-10 md:mt-20 container mx-auto px-4 py-16 h-full flex flex-col md:flex-row items-center justify-between">
+                        <div className="max-w-4xl  md:mt-0 text-center md:text-left">
+                            <h1 className={`text-4xl md:text-6xl ${geistSans.className} font-bold mb-6 bg-gradient-to-r from-blue-500 to-purple-700 text-transparent bg-clip-text`}>
                                 Hack On Hills - 2K25
                             </h1>
-                            <p className={`${inriaSerif.className} text-xl text-gray-300 mb-8`}>
+                            <p className={`${inriaSerif.className} text-lg md:text-xl text-gray-300 mb-8`}>
                                 Join the ultimate coding experience where innovation meets technology.
                                 48 hours of coding, learning, and building the future.
                             </p>
-                            <div className="space-x-4">
+                            <div className="space-y-4 space-x-4 md:space-y-0">
                                 <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-colors duration-200">
                                     Register
                                 </button>
@@ -37,7 +37,7 @@ const Landing = () => {
                                     Explore
                                 </button>
                             </div>
-                            <div className="flex mt-20 space-x-10">
+                            <div className="flex flex-col md:flex-row mt-10 md:mt-20 space-y-10 md:space-y-0 md:space-x-10">
                                 <FeatureCard
                                     icon={<IconFileCode2 className="w-8 h-8" />}
                                     title="Innovate"
@@ -54,27 +54,21 @@ const Landing = () => {
                                     description="Gain new skills and knowledge from workshops and mentors"
                                 />
                             </div>
-
                         </div>
 
-                        <div className="flex items-center justify-center">
-                            <div className="w-72 h-72 relative">
-                                <div className="absolute inset-0 bg-gradient-to-r from-blue-700 to-purple-800 rounded-full opacity-30 animate-pulse"></div>
+                        <div className="flex items-center justify-center mt-10 md:mt-0">
+                            <div className="w-48 h-48 md:w-72 md:h-72 relative">
+                                <div className="absolute inset-0 bg-gradient-to-r from-blue-800 to-purple-900 rounded-full opacity-80 animate-pulse"></div>
                                 <div className="absolute inset-0 flex items-center justify-center">
-                                    <IconCodeAsterisk className="w-32 h-32 text-blue-400" />
+                                    <IconCode className="w-24 h-24 md:w-32 md:h-32 text-blue-200" />
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </BackgroundBeamsWithCollision>
-    )
+    );
+};
 
-}
-
-export default Landing
+export default Landing;
