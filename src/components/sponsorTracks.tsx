@@ -3,7 +3,7 @@ import { Wallet, Code, Zap, Database } from "lucide-react"
 import { motion } from "framer-motion"
 import React from "react"
 import { Geist, Inria_Serif, Sansita } from "next/font/google";
-import { style } from "framer-motion/client";
+// import { style } from "framer-motion/client";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -86,9 +86,7 @@ export default function SponsorTracks() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="relative group"
             >
-              <div className="absolute inset-0 rounded-lg transform transition-transform group-hover:scale-[1.02] duration-300" style={{background: 'rgb(240, 223, 223)'}}></div>
-
-              <div className="relative p-6 rounded-lg h-full flex flex-col">
+              <div className="relative p-6 rounded-lg h-full flex flex-col border-2 border-transparent group-hover:border-blue-500 transition-all duration-300" style={{background: 'rgb(239, 223, 223)'}}>
                 <div className="mb-4">
                   <div className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-100">
                     <sponsor.icon className="w-6 h-6 text-[#4285F4]" />

@@ -1,8 +1,23 @@
 "use client"
-
+import { Geist, Inria_Serif, Sansita } from "next/font/google";
 import { useState, useEffect } from "react"
 import Image from "next/image"
-import { motion } from "framer-motion"
+import { color, motion } from "framer-motion"
+import { style } from "framer-motion/client";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const inriaSerif = Inria_Serif({
+  subsets: ["latin"],
+  weight: ["400", "700"]
+});
+const sansita = Sansita({
+  subsets: ["latin"],
+  weight: ["400", "700"]
+})
 
 export default function SponsorsSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -33,25 +48,25 @@ export default function SponsorsSection() {
     {
       name: "Platinum",
       sponsors: [
-        { name: "Sponsor 1", logo: "/placeholder.svg?height=120&width=240" },
-        { name: "Sponsor 2", logo: "/placeholder.svg?height=120&width=240" },
+        { name: "Sponsor 1" , logo: "/placeholder.svg?height=120&width=240", color: "#efdfdf" },
+        { name: "Sponsor 2", logo: "/placeholder.svg?height=120&width=240", color: "#efdfdf" },
       ],
     },
     {
       name: "Gold",
       sponsors: [
-        { name: "Sponsor 3", logo: "/placeholder.svg?height=100&width=200" },
-        { name: "Sponsor 4", logo: "/placeholder.svg?height=100&width=200" },
-        { name: "Sponsor 5", logo: "/placeholder.svg?height=100&width=200" },
+        { name: "Sponsor 3", logo: "/placeholder.svg?height=100&width=200", color: "#efdfdf" },
+        { name: "Sponsor 4", logo: "/placeholder.svg?height=100&width=200", color: "#efdfdf" },
+        { name: "Sponsor 5", logo: "/placeholder.svg?height=100&width=200", color: "#efdfdf" },
       ],
     },
     {
       name: "Silver",
       sponsors: [
-        { name: "Sponsor 6", logo: "/placeholder.svg?height=80&width=160" },
-        { name: "Sponsor 7", logo: "/placeholder.svg?height=80&width=160" },
-        { name: "Sponsor 8", logo: "/placeholder.svg?height=80&width=160" },
-        { name: "Sponsor 9", logo: "/placeholder.svg?height=80&width=160" },
+        { name: "Sponsor 6", logo: "/placeholder.svg?height=80&width=160", color: "#efdfdf" },
+        { name: "Sponsor 7", logo: "/placeholder.svg?height=80&width=160", color: "#efdfdf" },
+        { name: "Sponsor 8", logo: "/placeholder.svg?height=80&width=160", color: "#efdfdf" },
+        { name: "Sponsor 9", logo: "/placeholder.svg?height=80&width=160", color: "#efdfdf" },
       ],
     },
   ]
@@ -61,7 +76,7 @@ export default function SponsorsSection() {
       id="sponsors-section"
       className="relative py-20 overflow-hidden"
       style={{
-        background: "linear-gradient(180deg, #120338 0%, #2b0650 100%)",
+        background: 'linear-gradient(135deg, #000000 0%,rgb(72, 72, 72) 50%,rgb(2, 5, 43) 100%)',
       }}
     >
       {/* Retrowave Grid */}
@@ -69,7 +84,7 @@ export default function SponsorsSection() {
         className="absolute inset-0 z-0 opacity-20"
         style={{
           backgroundImage:
-            "linear-gradient(#ff00ff 1px, transparent 1px), linear-gradient(90deg, #ff00ff 1px, transparent 1px)",
+            "linear-gradient(rgb(133, 142, 150) 1px, transparent 1px), linear-gradient(90deg,rgb(133, 142, 150) 1px, transparent 1px)",
           backgroundSize: "40px 40px",
           perspective: "1000px",
           transform: "rotateX(60deg)",
@@ -86,7 +101,7 @@ export default function SponsorsSection() {
             height: "0",
             borderLeft: "100px solid transparent",
             borderRight: "100px solid transparent",
-            borderBottom: "180px solid rgba(255, 0, 255, 0.2)",
+            borderBottom: "180px solid rgba(0, 0, 0, 0.2)",
           }}
         />
         <div
@@ -96,7 +111,7 @@ export default function SponsorsSection() {
             height: "0",
             borderLeft: "150px solid transparent",
             borderRight: "150px solid transparent",
-            borderBottom: "250px solid rgba(0, 255, 255, 0.15)",
+            borderBottom: "250px solid rgba(165, 173, 209, 0.15)",
           }}
         />
         <div
@@ -106,7 +121,7 @@ export default function SponsorsSection() {
             height: "0",
             borderLeft: "120px solid transparent",
             borderRight: "120px solid transparent",
-            borderBottom: "200px solid rgba(255, 0, 255, 0.2)",
+            borderBottom: "200px solid rgba(3, 134, 195, 0.2)",
           }}
         />
       </div>
@@ -118,11 +133,11 @@ export default function SponsorsSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#ff00ff] to-[#00ffff]">
+          <h2 className={`text-5xl ${sansita.className} font-bold mb-4 text-white`}>
             Our Sponsors
           </h2>
-          <div className="h-1 w-40 mx-auto bg-gradient-to-r from-[#ff00ff] to-[#00ffff]"></div>
-          <p className="mt-6 text-[#f0f0ff] max-w-2xl mx-auto">
+          <div className="h-1 w-40 mx-auto bg-gradient-to-r from-blue-500 to-slate-500"></div>
+          <p className={`mt-6 text-gray-300 ${sansita.className} max-w-2xl mx-auto`}>
             We're grateful to our amazing sponsors who make Hack on Hills possible. Their support empowers the next
             generation of innovators.
           </p>
@@ -138,7 +153,7 @@ export default function SponsorsSection() {
               className="text-center"
             >
               <div className="inline-block mb-8">
-                <h3 className="text-2xl font-semibold text-white px-6 py-2 rounded-full border-2 border-[#ff00ff] shadow-[0_0_15px_rgba(255,0,255,0.5)]">
+                <h3 className={`text-2xl ${sansita.className} font-semibold text-white px-6 py-2 rounded-full border-2 border-blue-500 shadow-[0_0_15px_rgba(0,0,255,0.5)]`}>
                   {tier.name} Sponsors
                 </h3>
               </div>
@@ -152,11 +167,12 @@ export default function SponsorsSection() {
                     transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                     whileHover={{
                       scale: 1.05,
-                      boxShadow: "0 0 25px rgba(0, 255, 255, 0.6)",
+                      boxShadow: "0 0 25px rgba(255, 217, 0, 0.6)",
                     }}
-                    className="bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 flex items-center justify-center"
+                    className="p-6 rounded-lg border-2 border-transparent group-hover:border-blue-500 transition-all duration-5 flex items-center justify-center"
                     style={{
-                      boxShadow: "0 0 15px rgba(0, 255, 255, 0.3)",
+                      background: sponsor.color,
+                      boxShadow: "0 0 15px #f7e98e )",
                     }}
                   >
                     <Image
@@ -176,15 +192,15 @@ export default function SponsorsSection() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ duration: 0.2, delay: 0.2 }}
           className="mt-20 text-center"
         >
-          <button className="px-8 py-3 text-lg font-medium rounded-full bg-gradient-to-r from-[#ff00ff] to-[#00ffff] text-white hover:shadow-[0_0_25px_rgba(255,0,255,0.8)] transition-shadow duration-300">
+          <button className="px-8 py-3 text-lg font-bold rounded-full bg-gradient-to-r from-blue-800 to-slate-900 text-white hover:shadow-[0_0_25px_rgba(247,233,142,0.8)] transition-shadow duration-300">
             Become a Sponsor
           </button>
-          <p className="mt-4 text-[#f0f0ff] text-sm">
-            Interested in sponsoring Hack on Hills 2025? Contact us at{" "}
-            <span className="text-[#00ffff]">sponsors@hacksonhills.com</span>
+          <p className="mt-4 text-white-300 text-sm">
+            Interested in sponsoring Hack on Hills 2025? Contact us at
+            <h2 className="text-grey-500">"sponsors@hacksonhills.com"</h2>
           </p>
         </motion.div>
       </div>
