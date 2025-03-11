@@ -2,6 +2,8 @@ import React from 'react';
 import About from '@/components/About';
 import Landing from '@/components/Landing';
 import SponsorsSection from '@/components/SponsorsSection';
+import Contact from '@/components/Contact';
+import SponsorTracks from '@/components/sponsorTracks';
 
 
 export default function Home() {
@@ -10,6 +12,8 @@ export default function Home() {
       <Landing />
       <About/>
       <SponsorsSection/>
+      <SponsorTracks />
+      <Contact />
     </main>
   );
 }
