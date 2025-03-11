@@ -1,4 +1,3 @@
-
 import { BackgroundBeamsWithCollision } from "@/components/ui/BackgroundBeamsWithCollison";
 import { IconCode, IconFileCode2 } from "@tabler/icons-react";
 import { Geist, Inria_Serif, Sansita } from "next/font/google";
