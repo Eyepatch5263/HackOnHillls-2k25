@@ -1,5 +1,6 @@
 import About from '@/components/About';
 import Landing from '@/components/Landing';
+import SponsorTracks from '@/components/sponsorTracks';
 import React from 'react'
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <main>
       <Landing />
       <About/>
+      <SponsorTracks/>
     </main>
   );
 }
