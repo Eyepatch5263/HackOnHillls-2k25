@@ -2,7 +2,7 @@ import React from 'react';
 import About from '@/components/About';
 import Landing from '@/components/Landing';
 import SponsorsSection from '@/components/SponsorsSection';
-
+import FAQ from '@/components/FAQ';
 
 export default function Home() {
   return (
@@ -10,6 +10,7 @@ export default function Home() {
       <Landing />
       <About/>
       <SponsorsSection/>
+      <FAQ />
     </main>
   );
 }
