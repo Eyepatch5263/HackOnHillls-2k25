@@ -21,33 +21,33 @@ const sansita = Sansita({
 const sponsors = [
   {
     id: 1,
-    name: "Name1",
-    amount: "₹NA",
-    description: "Description",
+    name: "Etherum blue",
+    amount: "₹1,00,000",
+    description: "Innovative solutions and projects built on Ethereum",
     icon: Wallet,
     color: "#627EEA", // Ethereum blue
   },
   {
     id: 2,
-    name: "Name2",
-    amount: "₹NA",
-    description: "Description",
+    name: "Solana purple",
+    amount: "₹50,000",
+    description: "High-performance blockchain applications and NFTs",
     icon: Zap,
     color: "#9900FF", // Solana purple
   },
   {
     id: 3,
-    name: "Name3",
-    amount: "₹NA",
-    description: "Description",
+    name: "Polygon purple",
+    amount: "₹30,000",
+    description: "Scaling solutions for Web3 developers and enterprises",
     icon: Database,
     color: "#8247E5", // Polygon purple
   },
   {
     id: 4,
-    name: "Name4",
-    amount: "₹NA",
-    description: "Description",
+    name: "Algorand black",
+    amount: "₹30,000",
+    description: "Carbon-negative blockchain for sustainable applications",
     icon: Code,
     color: "#000000", // Algorand black
   },
@@ -56,10 +56,7 @@ const sponsors = [
 export default function SponsorTracks() {
   return (
     <section
-      className="w-full py-20 px-4 md:px-8"
-      style={{
-        background: 'linear-gradient(135deg, #000000 0%,rgb(72, 72, 72) 50%,rgb(2, 5, 43) 100%)',
-      }}
+      className="w-full py-20 px-4 md:px-8 bg-gradient-to-br from-slate-600 via-blue-950/50 to-black"
     >
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
@@ -86,18 +83,18 @@ export default function SponsorTracks() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="relative group"
             >
-              <div className="relative p-6 rounded-lg h-full flex flex-col border-2 border-transparent group-hover:border-blue-500 transition-all duration-300" style={{background: 'rgb(239, 223, 223)'}}>
+              <div className="relative p-6 rounded-lg h-full flex flex-col border-2 border-transparent group-hover:border-blue-500 transition-all duration-300" style={{background: 'rgb(39, 50, 69)'}}>
                 <div className="mb-4">
                   <div className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-100">
                     <sponsor.icon className="w-6 h-6 text-[#4285F4]" />
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{sponsor.name}</h3>
+                <h3 className="text-xl font-bold text-white mb-2">{sponsor.name}</h3>
 
                 <div className="text-2xl font-bold mb-3 text-[#4285F4]">{sponsor.amount}</div>
 
-                <p className="text-gray-600 text-sm mb-6">{sponsor.description}</p>
+                <p className="text-white text-sm mb-6">{sponsor.description}</p>
 
                 <div className="mt-auto">
                   <div className="h-1 w-16 bg-[#4285F4] group-hover:w-full transition-all duration-300"></div>
