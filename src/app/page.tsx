@@ -5,6 +5,7 @@ import SponsorsSection from '@/components/SponsorsSection';
 import PrizePool from '@/components/PrizePool';
 
 
+import SponsorTracks from '@/components/sponsorTracks';
 export default function Home() {
   return (
     <main>
@@ -12,6 +13,7 @@ export default function Home() {
       <About/>
       <PrizePool/>
       <SponsorsSection/>
+      <SponsorTracks/>
     </main>
   );
 }
