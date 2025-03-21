@@ -1,9 +1,8 @@
-"use client";
-import React from 'react';
 import { BackgroundBeamsWithCollision } from "@/components/ui/BackgroundBeamsWithCollison";
 import { IconCode, IconFileCode2 } from "@tabler/icons-react";
 import { Geist, Inria_Serif, Sansita } from "next/font/google";
 import { FeatureCard } from './ui/FeatureCard';
+import React from "react";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
