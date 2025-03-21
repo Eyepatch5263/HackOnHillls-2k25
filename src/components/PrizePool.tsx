@@ -32,7 +32,7 @@ const fontClasses = {
 const DynamicImage = dynamic(() => import('next/image'), { ssr: false })
 
 // Define a static icon component outside to ensure consistency
-const PrizeIcon = () => <Zap className="h-5 w-5 text-[#9900FF]" />;
+const PrizeIcon = () => <Zap className="h-5 w-5 text-[#4285F4]" />;
 
 // Define special prizes array
 const specialPrizes = [
@@ -122,7 +122,7 @@ const sponsoredPrizes = [
 
 export default function PrizePool() {
   return (
-    <div className={`min-h-screen bg-gradient-to-br from-black via-slate-600 to-blue-950/50 text-white py-12 px-4 sm:px-6 lg:px-8`}>
+    <div className={`min-h-screen bg-gradient-to-br from-slate-600 via-blue-950/50 text-white py-12 px-4 sm:px-6 lg:px-8`}>
       <div className="container mx-auto">
         {/* Main heading */}
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -218,36 +218,8 @@ export default function PrizePool() {
           </div>
         </div>
         
-        {/* Special Track Prizes */}
-        <div className="mb-20">
-          <h2 className={`text-3xl font-bold mb-12 text-center text-white ${fontClasses.heading}`}>
-            Special Track Prizes
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {specialPrizes.map((prize, index) => (
-              <div
-                key={index}
-                className="bg-gray-800/50 p-6 rounded-xl shadow hover:shadow-purple-500/10 hover:-translate-y-1 transition-all duration-300"
-              >
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="p-2 rounded-full bg-purple-500/20">
-                    {prize.icon}
-                  </div>
-                  <h3 className={`font-bold text-lg ${fontClasses.heading}`}>{prize.title}</h3>
-                </div>
-                <p className={`text-sm text-gray-400 mb-3 ${fontClasses.body}`}>{prize.sponsor}</p>
-                <p className={`text-xl font-bold text-white mb-2 ${fontClasses.heading}`}>{prize.amount}</p>
-                <p className={`text-gray-400 text-sm mb-4 ${fontClasses.body}`}>{prize.description}</p>
-                <button className={`w-full py-1.5 px-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors ${fontClasses.button}`}>
-                  View Details
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-        
         {/* Sponsored Prizes */}
-        <div className="py-12 bg-gray-900/50 rounded-2xl">
+        <div className="py-12 rounded-2xl">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className={`text-3xl font-bold text-white mb-4 ${fontClasses.heading}`}>
               Sponsored Prizes
@@ -261,7 +233,7 @@ export default function PrizePool() {
             {sponsoredPrizes.map((prize, index) => (
               <div
                 key={index}
-                className="flex gap-4 p-5 rounded-xl bg-gray-800/50 border border-gray-700 hover:border-purple-500/50 transition-all duration-300"
+                className="flex gap-4 p-5 rounded-xl bg-gray-800/50 border border-gray-700 hover:border-blue-500 transition-all duration-300"
               >
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white">
                   <DynamicImage
@@ -282,7 +254,7 @@ export default function PrizePool() {
                   <p className={`text-sm text-gray-400 ${fontClasses.body}`}>{prize.description}</p>
                   <p className={`font-medium text-white ${fontClasses.heading}`}>{prize.prize}</p>
                   <div className="pt-2">
-                    <button className={`inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors ${fontClasses.button}`}>
+                    <button className={`inline-flex items-center text-blue-500 hover:text-blue-500 transition-colors ${fontClasses.button}`}>
                       Learn more
                       <ArrowRight className="h-4 w-4 ml-1" />
                     </button>
